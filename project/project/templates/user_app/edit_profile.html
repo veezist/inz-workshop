@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+  <div class="col-md-2 col-md-offset-5">
+    <form method='POST' action=''>
+      {% csrf_token %}
+      {{ update_user_form|crispy }}
+      <input class='button is-primary' type='submit' value='Edit'/>
+    </form>
+  </div>
+
+{% endblock %}

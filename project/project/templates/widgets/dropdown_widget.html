@@ -1,0 +1,20 @@
+
+<div name="{{ widget.name }}" class="dropdown is-active">
+  <div class="dropdown-trigger">
+    <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Wybierz auto</span>
+    </div>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+        {% if widget.value %}
+        {% for item in widget.value %}
+      <hr class="dropdown-divider">
+      <a class="dropdown-item">
+        {{ widget.value }}
+      </a>
+        {% endfor %}
+        {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    background-image: url(../assets/backgroud-speed.jpg);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container-data{
+    background-color: #A12727;
+    opacity: 1;
+    vertical-align: center;
+    border-radius:50px;
+    padding: 30px;
+}
+
+#data-cell{
+    text-align: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+.label{
+    color: white;
+}
+#button-round {
+    border-radius: 200px;
+margin-top:15px;
+    margin-bottom: 10px;
+}
+
+.button.is-danger{
+    background-color: #D10501;
+}
+.circle-plus{justify-content: center;}
+.circle-plus .horizontal {position: absolute; background-color: #57524D; width: 3em; height: .7em; top: 2.2em; left: 1.05em;}
+.circle-plus .vertical {position: absolute; background-color: #57524D; width: .7em; height: 3em; top: 1.05em; left: 2.2em;}
+
+#enlarge-on-hover{
+    transition: transform 0.5s;
+    text-align: end;
+    vertical-align: bottom;
+}
+
+#enlarge-on-hover:hover{
+    transform: scale(1.3);
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+#enlarge-on-hover:hover .tooltiptext {
+  visibility: visible;
+}
+#reserve-field{
+    margin-top: 100px;
+}

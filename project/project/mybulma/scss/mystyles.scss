@@ -1,0 +1,113 @@
+@import "../../mybulma/node_modules/bulma/bulma.sass";
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: black;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $brown;
+$primary: black;
+$link: $brown;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+p{
+  color: black;
+}
+
+.navbar.is-primary{
+  opacity:0.9;
+  background-color: #A12727;
+
+}
+
+.box{
+  height: 100%;
+  margin-top: 30px;
+}
+.control{
+  color:black;
+}
+
+#title{
+  color:black;
+
+}
+
+#body-section{
+}
+#login-section {
+
+}
+
+#menu{
+  color:white;
+    padding-left: 9px;
+
+}
+
+.menu-label{
+  color:black;
+  padding-left: 9px;
+}
+
+.container-fluid{
+  margin-right: 10px;
+}
+.footer{
+  opacity:0.9;
+  background-color: #A12727;
+  vertical-align: bottom;
+  height: 2em;
+  margin-top: 70px;
+  margin-bottom: 0;
+  padding: auto;
+  padding-bottom: 30px;
+  padding-top: 10px;
+
+}
+#sidebar-box{
+  margin-left: 20px;
+  background-color: #A12727;
+  opacity: 0.9;
+  border-radius: 50px;
+}
+
+#content-box {
+  opacity: 0.97;
+padding-top: 20px;
+  background-color: #CED4BE;
+    border-radius: 20px;
+
+}
+
+
+.footer p{
+  color:black;
+}

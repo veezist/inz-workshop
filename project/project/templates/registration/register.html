@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div id="login-container" class="container-fluid is is-narrow-desktop">
+    <section class="column is-half
+is-offset-one-quarter" id="login-section">
+<p id="title" class="title is-dark has-text-centered">
+        Rejestracja
+      </p>
+  <form method="post">
+    {% csrf_token %}
+    <div class="field">
+  <div class="control">
+      {{ form|crispy}}
+  </div>
+</div>
+
+    <button class="button is-primary" type="submit">Sign up</button>
+  </form>
+    </section>
+    </div>
+{% endblock %}

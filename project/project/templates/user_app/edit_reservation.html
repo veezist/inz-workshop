@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <p id="title" class="title has-text-centered">
+        Edytuj rezerwację
+      </p>
+    <div class="column is-half is-offset-one-quarter" >
+     <div class="box" >
+
+    <form method='POST' action=''>
+      {% csrf_token %}
+        <div id="title" class="label">Umówiony termin: {{ reservation.datetime_from }}</div>
+      {{ form|crispy }}
+      <input class='button is-primary' type='submit' value='Dalej'/>
+    </form>
+
+  </div>
+    </div>
+{% endblock content %}

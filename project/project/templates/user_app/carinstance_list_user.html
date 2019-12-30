@@ -1,0 +1,80 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+<p id="title" class="title has-text-centered">
+        Twoje samochody
+      </p>
+<div class="columns">
+
+<div class="column is-half">
+
+
+    <ul>
+
+<div id="test" class="columns is-multiline is-0">
+      {% for carinst in cars %}
+          <div class="column is-3 is-size-5 " >
+            <div id="enlarge-on-hover" class="box">
+          <div><a href="{% url 'car-detail' carinst.car.pk %}"><strong>{{carinst.car}}</strong></a></div>
+                <div><a href="{% url 'car-delete' carinst.pk %}"><strong>Usun auto</strong></a></div>
+            <div>
+          ({{ carinst.year_of_production }})
+            </div>
+            </div>
+          </div>
+      {% endfor %}
+ <div class="column is-3 is-size-7 " >
+            <div id="enlarge-on-hover" class=" notification box column add is-offset-one-quarter">
+                <a href="{% url 'add_cars' %}" >
+                <span class="tooltiptext">Dodaj nowe auto</span>
+                <div class="circle-plus">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+                    </a>
+        </div>
+    </div>
+</div>
+    </ul>
+
+
+</div>
+
+<div class="column is-2"></div>
+<div class="column  ">
+         <div id="container-data" class="container-fluid notification is-dark is-fullheight">
+                <div class="field">
+                <label class="label">Nazwa użytkownika</label>
+                     <div id="data-cell" class="input">
+                         {{user.get_username}}
+                    </div>
+                </div>
+               <div class="field">
+                <label class="label">E-mail</label>
+                     <div id="data-cell" class="input">
+                         {{user.email}}
+                    </div>
+                </div>
+               <div class="field">
+                <label class="label">Data dołączenia</label>
+                     <div id="data-cell" class="input">
+                         {{ user.date_joined|date:'d.m.Y' }}
+                    </div>
+                </div>
+               <div class="field">
+                <label class="label">Zniżka</label>
+                     <div id="data-cell" class="input">
+                         20%
+                    </div>
+                </div>
+             <div class="columns">
+
+                 <button id="button-round" class="button column is-half is-danger"><a href="{% url 'user_delete'%}">Usuń konto</button></a>
+             <button id="button-round" class="button column is-half is-info"><a href="{% url 'edit_profile'%}">Edytuj konto</button>
+             </div>
+         </div>
+</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Delete {{ user.username }}?</h1>
+
+
+<form method="POST" action="">
+{% csrf_token %}
+    <strong>Jesteś pewny, że chcesz usunąć to konto?</strong>
+<input type="submit" value="Yes"/>
+<a href="{% url 'my-cars' %}">Cancel </a>
+</form>
+{% endblock %}

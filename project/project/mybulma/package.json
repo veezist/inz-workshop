@@ -1,0 +1,17 @@
+{
+  "name": "mybulma",
+  "version": "1.1.1",
+  "description": "bulma",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "css-build": "node-sass scss -o ../user_app/static/css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "node-sass": "^4.13.0"
+  }
+}

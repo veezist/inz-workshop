@@ -1,0 +1,13 @@
+{% block breadcrumbs %}
+           <nav class="breadcrumb is-right" aria-label="breadcrumbs">
+  <ul>
+      <a href="{% url 'index' %}">Home</a>
+    {% block crumbs %}
+            {% if title %} &rsaquo; {{ title }}{% endif %}
+        {% endblock crumbs %}
+    <li class="is-active"><a href="#" aria-current="page">{{}}</a></li>
+  </ul>
+          </nav>
+        {% endblock %}
+
+

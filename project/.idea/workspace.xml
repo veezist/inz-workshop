@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9285d76c-da39-4b96-9add-02af4252bb69" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="$USER_HOME$/AppData/Roaming/npm/node_modules/bower" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1UUNlKfZUmEcRAjxMfd1T1QiDW9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vendjango" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Veeze\Desktop\inz kopia\inz\project\project\user_app\static\assets" />
+      <recent name="C:\Users\Veeze\Desktop\inz kopia\inz\project\project\templates" />
+      <recent name="C:\Users\Veeze\Desktop\inz kopia\inz\project\project\user_app\static" />
+      <recent name="C:\Users\Veeze\Desktop\inz kopia\inz\project\project\static\static_files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Veeze\Desktop\inz kopia\inz\project\project\static\static_files\css" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.debugowanko">
+    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="carinstance_list_user.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project/project/templates/user_app/carinstance_list_user.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="debugowanko" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Veeze\Desktop\inz kopia\inz\vendjango\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Veeze\Desktop\inz kopia\inz\vendjango\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Veeze\Desktop\inz kopia\inz\vendjango\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="true" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Nosetests in bin" type="tests" factoryName="Nosetests" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Veeze\Desktop\inz kopia\inz\vendjango\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django tests.Test: " />
+      <item itemvalue="JavaScript Debug.carinstance_list_user.html" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python.debugowanko" />
+      <item itemvalue="Python.views" />
+      <item itemvalue="Python tests.Nosetests in bin" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.debugowanko" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="JavaScript Debug.carinstance_list_user.html" />
+        <item itemvalue="Django tests.Test: " />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9285d76c-da39-4b96-9add-02af4252bb69" name="Default Changelist" comment="" />
+      <created>1575407363537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575407363537</updated>
+      <workItem from="1575407364801" duration="5701000" />
+      <workItem from="1575441501861" duration="665000" />
+      <workItem from="1576033727767" duration="9989000" />
+      <workItem from="1576043771272" duration="61547000" />
+      <workItem from="1576280714775" duration="4918000" />
+      <workItem from="1576362046720" duration="43606000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="21" key="#Inspections" timestamp="1576036928227">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="21" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1576036928227" />
+    <state x="137" y="18" width="1092" height="694" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576803878816">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" width="1092" height="694" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1576803878816" />
+    <state x="405" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576803129137">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1576803129137" />
+    <state x="422" y="88" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576082544730">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="422" y="88" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1576082544730" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576198385130">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1576198385130" />
+    <state x="260" y="58" width="730" height="670" key="EditFileWatcherDialog" timestamp="1576082829952">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="260" y="58" width="730" height="670" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1576082829952" />
+    <state x="433" y="236" key="FileChooserDialogImpl" timestamp="1576804284404">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="433" y="236" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576804284404" />
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1576044557334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.728@0.0.1366.728" timestamp="1576044557334" />
+    <state width="1285" height="202" key="GridCell.Tab.0.bottom" timestamp="1576804366864">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576804366864" />
+    <state width="1285" height="202" key="GridCell.Tab.0.center" timestamp="1576804366863">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576804366863" />
+    <state width="1285" height="202" key="GridCell.Tab.0.left" timestamp="1576804366863">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576804366863" />
+    <state width="1285" height="202" key="GridCell.Tab.0.right" timestamp="1576804366864">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576804366864" />
+    <state width="1285" height="202" key="GridCell.Tab.1.bottom" timestamp="1576804366741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576804366741" />
+    <state width="1285" height="202" key="GridCell.Tab.1.center" timestamp="1576804366740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1576804366740" />
+    <state width="1285" height="202" key="GridCell.Tab.1.left" timestamp="1576804366740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1576804366740" />
+    <state width="1285" height="202" key="GridCell.Tab.1.right" timestamp="1576804366741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1285" height="202" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1576804366741" />
+    <state width="1286" height="203" key="GridCell.Tab.2.bottom" timestamp="1575430391309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="203" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575430391309" />
+    <state width="1286" height="203" key="GridCell.Tab.2.center" timestamp="1575430391308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="203" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1575430391308" />
+    <state width="1286" height="203" key="GridCell.Tab.2.left" timestamp="1575430391308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="203" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1575430391308" />
+    <state width="1286" height="203" key="GridCell.Tab.2.right" timestamp="1575430391308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="203" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1575430391308" />
+    <state x="126" y="11" key="SettingsEditor" timestamp="1576804335736">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="126" y="11" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576804335736" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1576362074856">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576362074856" />
+    <state x="0" y="0" width="736" height="728" key="find.popup" timestamp="1576788433204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="736" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1576788433204" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1576803240350">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1576803240350" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/user_app/forms.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/user_app/forms.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/user_app/views.py</url>
+          <line>169</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/user_app/views.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/project/templates/navbar.html</url>
+          <line>5</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/project/templates/registration/login.html</url>
+          <line>34</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/project/templates/user_app/carinstance_list_user.html</url>
+          <line>21</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/project/templates/user_app/carinstance_list_user.html</url>
+          <line>15</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/project$manage.coverage" NAME="debugowanko Coverage Results" MODIFIED="1576804366674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/project$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1575408067908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/project$views.coverage" NAME="views Coverage Results" MODIFIED="1576363694993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+  </component>
+</project>

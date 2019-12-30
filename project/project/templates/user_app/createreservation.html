@@ -1,0 +1,49 @@
+{% extends "base_generic.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <p id="title" class="title has-text-centered">
+        Dokonaj rezerwacji
+      </p>
+    <div class="column is-half is-offset-one-quarter" >
+     <div class="box" >
+
+    <form method='POST' action=''>
+      {% csrf_token %}
+        <div class="field">
+  <div class="control">
+            {{ form.description}}
+
+      <div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label">From</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control is-expanded has-icons-left">
+          {{ form.datetime_from.errors }}
+      {{ form.datetime_from}}
+          <span class="icon is-small is-left">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </span>
+           </p>
+    </div>
+        <div class="field">
+      <p class="control is-expanded has-icons-left">
+   {{ form.car_instance}}
+           <span class="icon is-small is-left">
+        <i class="fas fa-car"></i>
+           </span>
+ </p>
+    </div>
+  </div>
+</div>
+      <input class='button is-primary' type='submit' value='Dalej'/>
+    </form>
+
+
+  </div>
+    </div>
+{% endblock content %}

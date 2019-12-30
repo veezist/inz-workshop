@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+  <h2>Car Form</h2>
+
+  <form method="post" id="carForm" data-cars-url="{% url 'ajax_load_cars' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'my-cars' %}">Nevermind</a>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_brand").change(function () {
+      var url = $("#carForm").attr("data-cars-url");  // get the url of the `load_cities` view
+      var brandId = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'brand': brandId       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#id_model").html(data);  // replace the contents of the city input with the data that came from the server
+        }
+      });
+
+    });
+  </script>
+
+{% endblock %}
