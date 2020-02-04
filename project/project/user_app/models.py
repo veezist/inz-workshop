@@ -55,7 +55,6 @@ class Model(models.Model):
 
 
 class User(AbstractUser):
-
     def __str__(self):
         return f'{self.username}'
 
@@ -65,6 +64,7 @@ class Reservation(models.Model):
     description = models.TextField()
     datetime_to = models.DateField(blank=True, null=True)
     user = models.ForeignKey('User', on_delete=models.CASCADE, null=True)
+    staff = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, related_name='staff')
     car_instance = models.ForeignKey('CarInstance', on_delete=models.CASCADE, null=True)
 
     def __str__(self):

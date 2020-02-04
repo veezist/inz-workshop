@@ -72,3 +72,7 @@ margin-top:15px;
 #reserve-field{
     margin-top: 100px;
 }
+#btnicon {
+    padding: 0;
+    border: none;
+    background: none; }

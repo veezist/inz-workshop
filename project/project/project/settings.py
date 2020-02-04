@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'related_select',
     'debug_toolbar',
     'user_app',
-    'worker',
+    'staff',
 ]
 
 MIDDLEWARE = [
@@ -88,9 +88,10 @@ TEMPLATES = [
         },
     },
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "user_app", 'static')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, 'static')
 
 ]
 
@@ -151,6 +152,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
+
 LANGUAGE_CODE = 'pl'
 
 TIME_ZONE = 'UTC'
@@ -160,12 +162,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'index'
+REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 AUTH_USER_MODEL = "user_app.User"

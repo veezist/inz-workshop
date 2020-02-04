@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de538b20-6970-4105-9260-ff37ced2f4dd" name="Default Changelist" comment="" />
+    <list default="true" id="de538b20-6970-4105-9260-ff37ced2f4dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UUNaevBWSvvZqYf4NFCdyDHBhv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -68,6 +74,7 @@
       <workItem from="1575407281185" duration="46000" />
       <workItem from="1576806005267" duration="9000" />
       <workItem from="1576806050941" duration="9308000" />
+      <workItem from="1578000988124" duration="182000" />
     </task>
     <servers />
   </component>
@@ -123,6 +130,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576806191079" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1578000992134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578000992134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

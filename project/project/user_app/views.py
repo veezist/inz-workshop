@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -32,7 +33,6 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/register.html', {'form': form})
-
 
 def index(request):
     """View function for home page of site."""
@@ -147,14 +147,23 @@ def edit_reservation(request, pk):
 
 @login_required
 def reservations_list(request):
-    queryset = Reservation.objects.filter(user=request.user).order_by('datetime_from')
-    context = {
-        "queryset": queryset,
-        "title": request.user,
-    }
+    if request.user.is_staff:
 
-    return render(request, 'user_app/reservations_list.html', context)
+        queryset = Reservation.objects.all().exclude(staff=False).order_by('datetime_from')
+        context = {
+            "queryset": queryset,
+            "title": request.user,
+        }
 
+        return render(request, 'staff/reservations_list.html', context)
+    else:
+        queryset = Reservation.objects.filter(user=request.user).order_by('datetime_from')
+        context = {
+            "queryset": queryset,
+            "title": request.user,
+        }
+
+        return render(request, 'user_app/reservations_list.html', context)
 
 @login_required
 def user_car_list(request):
@@ -283,12 +292,4 @@ def user_delete_view(request):
     return render(request, 'user_app/user_delete_view.html', context)
 
 
-@user_passes_test(lambda user: user.is_staff)
-def reservations_list(request):
-    queryset = Reservation.objects.all
-    context = {
-        "queryset": queryset,
-        "title": request.user,
-    }
 
-    return render(request, 'user_app/reservations_list.html', context)

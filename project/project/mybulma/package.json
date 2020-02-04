@@ -4,7 +4,7 @@
   "description": "bulma",
   "main": "sass/mystyles.scss",
   "scripts": {
-    "css-build": "node-sass scss -o ../user_app/static/css",
+    "css-build": "node-sass scss -o ../static/css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
   },

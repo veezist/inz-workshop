@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+     <p id="title" class="title has-text-centered">
+        Rezerwacje nieprzypisane
+      </p>
+{% if queryset %}
+    {% for carinst in queryset %}
+    <div class="card">
+  <div class="card-content">
+ <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+         <a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a>
+        <a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a>
+        <p id="testowo">HAlo</p>
+        </figure>
+      <div class="media-content">
+        <p class="title is-4">{{ carinst.car_instance }}</p>
+        <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      {{carinst.description}}.
+      <br>
+      <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+    {% else %}
+<p>Brak rezerwacji</p>
+    {% endif %}
+
+
+{% endblock %}

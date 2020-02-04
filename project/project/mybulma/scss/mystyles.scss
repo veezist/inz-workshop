@@ -1,6 +1,4 @@
 @import "../../mybulma/node_modules/bulma/bulma.sass";
-@charset "utf-8";
-
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
@@ -110,4 +108,15 @@ padding-top: 20px;
 
 .footer p{
   color:black;
+}
+
+#btnicon{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+#testowo2{
+  color: red;
+  font-size: 90;
 }
