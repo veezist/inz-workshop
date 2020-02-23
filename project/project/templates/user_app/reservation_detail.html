@@ -1,0 +1,90 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<p id="title" class="title has-text-centered">
+    Szczegóły rezerwacji
+  </p>
+
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <a href="{% url 'edit_car_instance' pk=reservation.car_instance.pk %}">
+        {{reservation.car_instance.car}}
+      </a>
+      </p>
+      {% if user.is_staff %}
+      <a href="{% url 'postman:write' recipients=reservation.user %}">Napisz do {{ reservation.user.username }}</a>
+      {% else %}
+      <a href="{% url 'postman:write' recipients='reservation.staff' %}">Napisz do {{ reservation.staff.username }} </a>
+      {% endif %}
+    </header>
+    <div class="card-content">
+      <div class="content">
+        {% if reservation.progress == 1 %}
+       {{reservation.comment}}
+       {% else %}
+       {{reservation.description}}
+    {% endif %}
+    </div>
+    <footer class="card-footer">
+        {% if reservation.progress == 1 %}
+        <a class="label">
+            Cena:
+      <a  class="card-footer-item">{{reservation.price}}</a>
+        </a>
+        {% else %}
+        <a class="label">
+            Od:
+      <a  class="card-footer-item">{{reservation.datetime_from}}</a>
+        </a>
+        {% endif %}
+        <a class="label">
+          
+            &nbsp; Do:
+      {% if reservation.progress == 1 %}
+      <a class="card-footer-item"><strong>Zakończono</strong></a>
+      {% elif reservation.datetime_to %}
+      <a class="card-footer-item"><strong>{{reservation.datetime_to}}</strong></a>
+        {% else %}
+      <a class="card-footer-item"><strong>Czeka na akceptacje</strong></a>
+
+      {% endif %}
+    </a>
+      <a class="card-footer-item">
+          {% if reservation.progress == -2 %}
+          <strong>Oczekuje na zatwierdzenie</strong>
+          {% elif reservation.progress == -1  %}
+          <strong>Zaakceptowano</strong>
+          {% elif reservation.progress == 0  %}
+          <strong>W trakcie realizacji</strong>
+          {% elif reservation.progress == 1  %}
+          <strong>Zakończono</strong>
+          {% endif %}
+      </a>
+      <div class="card-footer-item">
+          {% if user.is_staff %}
+          <span title="Właściciel">
+              {{reservation.user.username}}
+          </span>
+          {% else %}
+          <span title="Osoba odpowiedzialna">
+              {% if reservation.staff is None %}
+              Czeka na akceptacje
+              {% else %}
+              <p>
+              <a href="{% url 'opinion_create' pk=reservation.staff.pk %}">
+             Wydaj opinie dla mechanika: <strong> {{reservation.staff.username}}</strong>
+            </a></p>
+        {% endif %}
+    </span>
+    {% endif %}
+
+  </div>
+      
+    </a>
+    </footer>
+  </div>
+
+
+{% endblock %}

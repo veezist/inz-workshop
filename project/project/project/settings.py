@@ -26,6 +26,14 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'postman.context_processors.inbox'
+)
+
+POSTMAN_DISALLOW_ANONYMOUS = True
+POSTMAN_SHOW_USER_AS = 'username'
+POSTMAN_NAME_USER_AS = 'username'
+POSTMAN_AUTO_MODERATE_AS = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +47,7 @@ INSTALLED_APPS = [
     'related_select',
     'debug_toolbar',
     'user_app',
-    'staff',
+    'postman'
 ]
 
 MIDDLEWARE = [

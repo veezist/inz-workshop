@@ -5,33 +5,382 @@
      <p id="title" class="title has-text-centered">
         Rezerwacje
       </p>
-{% if queryset %}
+ {% if user.is_staff is False %}
+      <input type="radio" id="wait" name="nav-tab" checked>
+      <input type="radio" id="accepted" name="nav-tab">
+      <input type="radio" id="progress" name="nav-tab">
+      <input type="radio" id="finished" name="nav-tab">
+      <div class="tabs is-centered is-large is-boxed is-toggle is-rounded ">
+        <ul>
+          <li><label for="wait"><a>Oczekujące</a></label></li>
+          <li ><label for="accepted"><a>Zaakceptowane</a></label></li>
+          <li ><label for="progress"><a>W trakcie</a></label></li>
+          <li ><label for="finished"><a>Ukończone</a></label></li>
+        </ul>
+
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane content-wait">
+          {% if queryset %}
+          {% for carinst in queryset %}
+          {% if carinst.progress == -2 %}
+          <div class="card ">
+        <div class="card-content">
+       <div class="media">
+            <div class="media-left">
+              <figure class="image is-70x70">
+                <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+               <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+              <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+              </figure>
+            <div class="media-content">
+              <p class="title is-4">{{ carinst.car_instance.car}}</p>
+              <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+            </div>
+          </div>
+      
+
+      
+       
+          <div class="content ">
+            {{carinst.description}}
+            <br>
+            <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+          </div>
+       
+      
+
+        </div>
+      </div>
+    </div>
+
+      {% endif %}
+          {% endfor %}
+          {% else %}
+      <p class="title is-4 has-text-centered">Brak rezerwacji</p>
+          {% endif %}
+      
+        </div>
+        <div class="tab-pane content-accepted">
+          {% if queryset %}
+          {% for carinst in queryset %}
+          {% if carinst.progress == -1 %}
+          <div class="card">
+        <div class="card-content">
+       <div class="media">
+            <div class="media-left">
+              <figure class="image is-70x70">
+                <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+                <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+               <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+              </figure>
+            <div class="media-content">
+              <p class="title is-4">{{ carinst.car_instance.car}}</p>
+              <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+            </div>
+          </div>
+      
+          <div class="content">
+            {{carinst.description}}
+            <br>
+            <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+          </div>
+        </div>
+      </div>
+      
+      {% endif %}
+      
+          {% endfor %}
+        </div>
+
+          {% else %}
+      <p class="title is-4 has-text-centered">Brak rezerwacji</p>
+          {% endif %}
+        </div>
+
+        <div class="tab-pane content-progress">
+          {% if queryset %}
+          {% for carinst in queryset %}
+          {% if carinst.progress == 0 %}
+          <div class="card">
+        <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+              <figure class="image is-70x70">
+                <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+                <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+               <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+               <span title="Zakończ"><a href="{% url 'end_reservation' pk=carinst.pk %}"><i class="fas fa-check-circle"  ></i></a></span>
+              </figure>
+            <div class="media-content">
+              <p class="title is-4">{{ carinst.car_instance.car}}</p>
+              <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+            </div>
+          </div>
+        
+          <footer class="card-footer">
+              
+            <div class="card-footer-item" ><span title="Właściciel">{{carinst.user}}</div> </span>
+          <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_to|date:'d.m.Y'}}</time>
+        
+          </footer>
+          <div class="content">
+            &nbsp; {{carinst.description}}
+            
+          </div>
+        </div>
+        </div>
+        </div>
+        
+        {% endif %}
+          {% endfor %}
+          {% else %}
+        <p class="title is-4 has-text-centered">Brak rezerwacji</p>
+          {% endif %}
+        
+        
+        
+        </div>
+
+
+        <div class="tab-pane content-finished">
+          {% if queryset %}
+          {% for carinst in queryset %}
+          {% if carinst.progress == 1 %}
+          <div class="card">
+        <div class="card-content">
+       <div class="media">
+            <div class="media-left">
+              <figure class="image is-70x70">
+                <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+                <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+               <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+              </figure>
+            <div class="media-content">
+              <p class="title is-4">{{ carinst.car_instance.car}}</p>
+              <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+            </div>
+          </div>
+      
+          <div class="content">
+            {{carinst.description}}
+            <br>
+            <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+          {% endfor %}
+          {% else %}
+      <p class="title is-4 has-text-centered">Brak rezerwacji</p>
+          {% endif %}
+      
+        </div>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% else %}
+<input type="radio" id="wait_staff" name="nav-tab" checked>
+<input type="radio" id="accepted_staff" name="nav-tab">
+<input type="radio" id="progress_staff" name="nav-tab">
+<input type="radio" id="finished_staff" name="nav-tab">
+<div class="halko tabs is-centered is-large is-boxed is-toggle is-rounded ">
+  <ul>
+    <li><label for="wait_staff"><a>Oczekujące</a></label></li>
+    <li ><label for="accepted_staff"><a>Zaakceptowane</a></label></li>
+    <li ><label for="progress_staff"><a>W trakcie</a></label></li>
+    <li ><label for="finished_staff"><a>Ukończone</a></label></li>
+  </ul>
+
+</div>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane content-wait-staff">
+    {% if queryset %}
     {% for carinst in queryset %}
+    {% if carinst.progress == -2 %}
     <div class="card">
   <div class="card-content">
  <div class="media">
       <div class="media-left">
-        <figure class="image is-48x48">
-         <a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a>
-        <a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a>
+        <figure class="image is-70x70">
+          <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+         <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+        <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+        <span title="Zaakceptuj rezerwacje"><a href="{% url 'accept_reservation' pk=carinst.pk %}"><i class="fas fa-check"></i></a></span>
         </figure>
       <div class="media-content">
-        <p class="title is-4">{{ carinst.car_instance }}</p>
+        <p class="title is-4">{{ carinst.car_instance.car}}</p>
         <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
       </div>
     </div>
 
-    <div class="content">
-      {{carinst.description}}.
-      <br>
+    
+    <footer class="card-footer">
+      
+        <div class="card-footer-item" ><span title="Właściciel">{{carinst.user}}</div> </span>
       <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+    
+      </footer>
+      <div class="content">
+        &nbsp; {{carinst.description}}
+        
+      </div>
+  </div>
+</div>
+</div>
+
+{% endif %}
+    {% endfor %}
+    {% else %}
+<p class="title is-4 has-text-centered">Brak rezerwacji</p>
+    {% endif %}
+
+  </div>
+
+ <div class="tab-pane content-accepted-staff">
+    {% if queryset2 %}
+    {% for carinst in queryset2 %}
+    {% if carinst.progress == -1 %}
+    <div class="card">
+  <div class="card-content">
+ <div class="media">
+      <div class="media-left">
+        <figure class="image is-70x70">
+          <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+          <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+         <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+       <span title="Dostarczono auto"><a href="{% url 'progress_reservation' pk=carinst.pk %}"><i class="fas fa-bus"  ></i></a></span>
+
+        </figure>
+      <div class="media-content">
+        <p class="title is-4">{{ carinst.car_instance.car}}</p>
+        <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+      </div>
+    </div>
+
+    <footer class="card-footer">
+      
+      <div class="card-footer-item" ><span title="Właściciel">{{carinst.user}}</div> </span>
+    <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_from|date:'d.m.Y'}}</time>
+  
+    </footer>
+    <div class="content">
+      &nbsp; {{carinst.description}}
+      
     </div>
   </div>
 </div>
+</div>
+
+{% endif %}
     {% endfor %}
     {% else %}
-<p>Brak rezerwacji</p>
+<p class="title is-4 has-text-centered">Brak rezerwacji</p>
     {% endif %}
 
 
-{% endblock %}
+
+  </div>
+
+
+  
+ <div class="tab-pane content-progress-staff">
+  {% if queryset2 %}
+  {% for carinst in queryset2 %}
+  {% if carinst.progress == 0 %}
+  <div class="card">
+<div class="card-content">
+<div class="media">
+    <div class="media-left">
+      <figure class="image is-70x70">
+        <span title="Edytuj"><a href="{% url 'edit_reservation' pk=carinst.pk %}"><i class="fas fa-edit"></i></a></span>
+        <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+       <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+       <span title="Zakończ"><a href="{% url 'end_reservation' pk=carinst.pk %}"><i class="fas fa-check-circle"  ></i></a></span>
+      </figure>
+    <div class="media-content">
+      <p class="title is-4">{{ carinst.car_instance.car}}</p>
+      <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+    </div>
+  </div>
+
+  <footer class="card-footer">
+      
+    <div class="card-footer-item" ><span title="Właściciel">{{carinst.user}}</div> </span>
+  <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_to|date:'d.m.Y'}}</time>
+
+  </footer>
+  <div class="content">
+    &nbsp; {{carinst.description}}
+    
+  </div>
+</div>
+</div>
+</div>
+
+{% endif %}
+  {% endfor %}
+  {% else %}
+<p class="title is-4 has-text-centered">Brak rezerwacji</p>
+  {% endif %}
+
+
+
+</div>
+  
+  <div class="tab-pane content-finished-staff">
+    {% if queryset2 %}
+    {% for carinst in queryset2 %}
+    {% if carinst.progress == 1 %}
+    <div class="card">
+  <div class="card-content">
+ <div class="media">
+      <div class="media-left">
+        <figure class="image is-70x70">
+          <span title="Usuń"><a href="{% url 'reservation-delete' pk=carinst.pk %}"><i class="fas fa-times"  ></i></a></span>
+         <span title="Szczegóły"><a href="{% url 'reservation-details' pk=carinst.pk %}"><i class="fas fa-info-circle"  ></i></a></span>
+        </figure>
+      <div class="media-content">
+        <p class="title is-4">{{ carinst.car_instance.car}}</p>
+        <p class="subtitle is-6">{{ carinst.car_instance.year_of_production }}</p>
+      </div>
+    </div>
+
+    <footer class="card-footer">
+      
+      <div class="card-footer-item" ><span title="Właściciel">{{carinst.user}}</div> </span>
+    <time class="card-footer-item" datetime="2016-1-1">{{carinst.datetime_to|date:'d.m.Y'}}</time>
+  
+    </footer>
+    <div class="content">
+      &nbsp; {{carinst.comment2}}
+      
+    </div>
+  </div>
+</div>
+</div>
+
+{% endif %}
+    {% endfor %}
+ 
+    {% endif %}
+
+
+
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock content %}

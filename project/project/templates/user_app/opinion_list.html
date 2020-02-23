@@ -1,0 +1,57 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+     <p id="title" class="title has-text-centered">
+        Opinie
+      </p>
+     
+
+     
+          {% if queryset %}
+          {% for carinst in queryset %}
+          <div class="card ">
+            <header class="card-header">
+              <p class="card-header-title">
+               Pracownik: {{ carinst.staff}}
+            </header>
+        <div class="card-content">
+       <div class="media">
+            <div class="media-left">
+             <div >
+              <p></p>
+             </div>
+           
+          </div>
+      
+        </div>
+
+      
+       
+          <div class="content ">
+            {{carinst.opinion}}
+            <br>
+          </div>
+       
+      
+
+      </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">Autor:&nbsp <strong> {{ carinst.user}}</strong></p>
+        <time class="card-footer-item" datetime="2016-1-1">Data opinii:&nbsp <strong>{{carinst.datetime|date:'d.m.Y'}}</strong></time>
+
+      </footer>
+    </div>
+
+          {% endfor %}
+          {% else %}
+      <p>Brak rezerwacji</p>
+          {% endif %}
+      
+  
+
+
+
+
+
+{% endblock content %}

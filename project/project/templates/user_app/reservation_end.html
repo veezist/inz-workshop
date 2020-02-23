@@ -1,0 +1,63 @@
+{% extends "base_generic.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block content %}
+    
+    <form method='POST' action=''>
+      {% csrf_token %}
+      
+
+      
+      <p id="title" class="title has-text-centered">
+          Zakończenie rezerwacji
+        </p>
+      
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{reservation.car_instance.car}}
+            </p>
+           
+          </header>
+          <div class="card-content">
+            <div class="content">
+             {{form.comment}}
+          </div>
+          <footer class="card-footer">
+              <a class="label">
+                  Od:
+            <a  class="card-footer-item">{{reservation.datetime_from}}</a>
+              </a>
+              <a class="label">
+                
+                  &nbsp; Cena:
+            <a class="card-footer-item">{{form.price}}</a>
+           
+          </a>
+            <a class="card-footer-item">
+                {% if reservation.progress == -2 %}
+                <strong>Oczekuje na zatwierdzenie</strong>
+                {% elif reservation.progress == -1  %}
+                <strong>Zaakceptowano</strong>
+                {% elif reservation.progress == 0  %}
+                <strong>W trakcie realizacji</strong>
+                {% elif reservation.progress == 1  %}
+                <strong>Zakończono</strong>
+                {% endif %}
+            </a>
+            <a class="card-footer-item">
+        <input class='button is-primary' type='submit' value='Zakończ'/>
+                
+             </a>
+            
+          </a>
+          </footer>
+        </div>
+      
+      
+    
+</form>
+
+{% endblock content %}

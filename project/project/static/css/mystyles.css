@@ -13107,5 +13107,27 @@ p {
 .footer p {
   color: black; }
 
+input[type="radio"], .tab-pane { display: none; }
+
+/* the magic */
+#wait:checked ~ .tab-content > .content-wait,
+#accepted:checked ~ .tab-content > .content-accepted,
+#progress:checked ~ .tab-content > .content-progress,
+#finished:checked ~ .tab-content > .content-finished {
+  display: block;
+}
+
+#wait_staff:checked ~ .tab-content > .content-wait-staff,
+#accepted_staff:checked ~ .tab-content > .content-accepted-staff,
+#progress_staff:checked ~ .tab-content > .content-progress-staff,
+#finished_staff:checked ~ .tab-content > .content-finished-staff {
+  display: block;
+}
+
+.no-decoration{
+  text-decoration: none;
+  color: white;
+  background-color: white;
+}
 
 /*# sourceMappingURL=mystyles.css.map */

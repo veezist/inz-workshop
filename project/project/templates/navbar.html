@@ -3,23 +3,17 @@
 
 <nav  class="navbar is-primary" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a class="navbar-item" href="{% url 'index' %}">
-              <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox"
-                   width="112" height="28" >
-            </a>
-
-            <a class="navbar-item " href="https://github.com/jgthms/bulma" target="_blank">
-              <span class="icon" style="color: #333;">
-                <i class="fab fa-github"></i>
-              </span>
-              </a>
-
-              <a class="navbar-item " href="https://twitter.com/jgthms" target="_blank">
+            &nbsp;&nbsp;
+            <p class="navbar-item" ">
               <span class="icon" style="color: #55acee;">
-                <i class="fab fa-twitter"></i>
+                <i class="fas fa-ambulance  fa-2x"></i>
               </span>
-              </a>
+            </p>
+            &nbsp;&nbsp;
+            <p class="navbar-item title is-4" >Warsztat</p>
 
+          
+           
               <div class="navbar-burger burger" data-target="navMenuExample">
                 <span></span>
                 <span></span>
@@ -28,7 +22,9 @@
 
           <div id="navMenuExample" class="navbar-menu">
             <div class="navbar-start">
-              <div class="navbar-item findColorInvert($red) has-dropdown is-hoverable">
+              {% if user.is_staff is False %}
+
+              <div class="navbar-item findColorInvert($blue) has-dropdown is-hoverable">
                 <a class="navbar-link" >
                   Profil
                 </a>
@@ -36,30 +32,35 @@
                   <a class="navbar-item " href="{% url 'my-cars' %}">
                     Moje auta
                   </a>
+                  
                 </div>
               </div>
-
+              {% endif %}
                  <div class="navbar-item findColorInvert($red) has-dropdown is-hoverable">
                 <a class="navbar-link" >
                   Rezerwacje
                 </a>
                 <div class="navbar-dropdown ">
+              {% if user.is_staff is False %}
+
                     <a class="navbar-item " href="{% url 'create_reservation' %}">
                     Zarezerwuj
                   </a>
+              {% endif %}
+
                      <a class="navbar-item " href="{% url 'reservations_list' %}">
                     Terminarz
                   </a>
                 </div>
               </div>
-
+              <a class="navbar-item" href="{% url 'opinion_list' %}">Opinie</a>
 
               </div>
             </div>
 
             <div class="navbar-end">
             {% if user.is_authenticated %}
-                <a class="navbar-item is-hidden-desktop-only"><i class="fas fa-user"></i><p>   </p> <strong> {{ user.get_username }}</strong></a>
+                <a class="navbar-item is-hidden-desktop-only"><i class="fas fa-user"></i><p>   </p> <strong>&nbsp; {{ user.get_username }}</strong></a>
             <a class="navbar-item is-hidden-desktop-only" href="{% url 'logout'%}?next={{request.path}}">Wyloguj</a>
           {% else %}
             <a class="navbar-item is-hidden-desktop-only" href="{% url 'login'%}?next={{request.path}}">Logowanie</a>

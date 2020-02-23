@@ -1,15 +1,17 @@
 {% extends "base_generic.html" %}
+{% load crispy_forms_tags %}
+
 {% block content %}
 
-  <h2>Car Form</h2>
+  <h2 class="title has-text-centered">Dodaj auto</h2>
 
   <form method="post" id="carForm" data-cars-url="{% url 'ajax_load_cars' %}" novalidate>
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
+      {{ form|crispy }}
     </table>
-    <button type="submit">Save</button>
-    <a href="{% url 'my-cars' %}">Nevermind</a>
+    <button class="button" type="submit">Dalej</button>
+    <button class="button is-danger" href="{% url 'my-cars' %}">Anuluj</button>
   </form>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

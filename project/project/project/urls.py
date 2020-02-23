@@ -28,6 +28,8 @@ urlpatterns = [
     path('home/', views.index, name='index'),
     path('accounts/signup/', views.signup, name='signup'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('messages/', include('postman.urls')),
+
 
 
 ]

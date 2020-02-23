@@ -1,19 +1,16 @@
 {% load static %}
-<aside class="menu" id="menu">
-  <p class="menu-label">
-    General
-  </p>
-  <ul class="menu-list">
-    <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
-  </ul>
+{% load i18n %}
+{% block postman_menu %}
 
-  <p class="menu-label">
-    Transactions
-  </p>
-  <ul class="menu-list">
-    <li><a>Payments</a></li>
-    <li><a>Transfers</a></li>
-    <li><a>Balance</a></li>
-  </ul>
+<aside class="menu" id="menu">
+ 
+
+  <ul class="menu-list" >
+    <li class="card"><a class="menu-item " href="{% url 'postman:inbox' %}">&raquo;&nbsp;{% trans "Inbox" %}{% if unread_count %} <strong>({{ unread_count }})</strong>{% endif %}</a></li>
+    <li class="card"><a href="{% url 'postman:sent' %}">&raquo;&nbsp;{% trans "Sent" %}</a></li>
+    <li class="card"><a href="{% url 'postman:write' %}">&raquo;&nbsp;{% trans "Write" %}</a></li>
+    <li class="card"><a href="{% url 'postman:archives' %}">&raquo;&nbsp;{% trans "Archives" %}</a></li>
+    <li class="card"><a href="{% url 'postman:trash' %}">&raquo;&nbsp;{% trans "Trash" %}</a></li>
+   </ul>
 </aside>
+{% endblock %}

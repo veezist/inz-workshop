@@ -1,6 +1,67 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>{{car.model}} {{car.brand}}</h1>
+
+<p id="title" class="title has-text-centered">
+    Szczegóły auta
+  </p>
+
+    <div class="column is-4 is-offset-4">
+        <div id="container-data" class="container-fluid notification is-dark is-fullheight">
+               <div class="field">
+               <label class="label">Marka</label>
+                    <div id="data-cell" class="input">
+                        {{car.car.brand}}
+                   </div>
+               </div>
+              <div class="field">
+               <label class="label">Model</label>
+                    <div id="data-cell" class="input">
+                        {{car.car.model}}
+                   </div>
+               </div>
+              <div class="field">
+               <label class="label">Rok produkcji</label>
+                    <div id="data-cell" class="input">
+                        {{ car.year_of_production }}
+                   </div>
+               </div>
+              
+               <div class="field">
+                <label class="label">Data ostatniego przeglądu</label>
+                     <div id="data-cell" class="input">
+                        {% if car.technical_review_date is None %}
+                             <p>Brak</p>
+                             {% else %}
+                             <p> {{car.technical_review_date}}</p>
+                             {% endif %}
+                     
+                         
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Przebieg wymiany rozrządu</label>
+                         <div id="data-cell" class="input" type="date" >
+                             {% if car.timing_gear_range is None %}
+                             <p>Brak</p>
+                             {% else %}
+                             {{car.timing_gear_range}}
+                             {% endif %}
+                        </div>
+                    </div>
+                <div class="field">
+                    <label class="label">Status auta</label>
+                         <div id="data-cell" class="input">
+                             {{car.status}}
+                        </div>
+                    </div>
+            <div class="columns">
+
+                <button id="button-round" class="button column is-half  is-offset-one-quarter is-danger"><a href="{% url 'car-delete' car.pk %}">Usuń auto</button></a>
+            </div>
+        </div>
+</div>
+
+
 
 {% endblock %}

@@ -16,8 +16,8 @@
       {% for carinst in cars %}
           <div class="column is-3 is-size-5 " >
             <div id="enlarge-on-hover" class="box">
-          <div><a href="{% url 'car-detail' carinst.car.pk %}"><strong>{{carinst.car}}</strong></a></div>
-                <div><a href="{% url 'car-delete' carinst.pk %}"><strong>Usun auto</strong></a></div>
+          <div><a href="{% url 'car-detail' carinst.pk %}"><strong>{{carinst.car}}</strong></a></div>
+                <small><a href="{% url 'car-delete' carinst.pk %}">Usun auto</a></small>
             <div>
           ({{ carinst.year_of_production }})
             </div>
@@ -65,7 +65,17 @@
                <div class="field">
                 <label class="label">Zniżka</label>
                      <div id="data-cell" class="input">
+                         {% if user.reservations_made == 4 %}
                          20%
+                         {% elif user.reservations_made == 3 %}
+                         15%
+                         {% elif user.reservations_made == 2 %}
+                         10%
+                         {% elif user.reservations_made == 1 %}
+                         5%
+                         {% elif user.reservations_made == 0 %}
+                         0%
+                         {% endif %}
                     </div>
                 </div>
              <div class="columns">
