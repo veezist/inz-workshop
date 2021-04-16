@@ -2,7 +2,7 @@ Django==2.2.6
 django-bower==5.2.0
 django-bulma==0.6.0
 django-crispy-forms==1.8.1
-django-debug-toolbar==2.1
+django-debug-toolbar==2.2.1
 -e git+https://github.com/djsutho/django-debug-toolbar-request-history.git@35f520af3c4a6004f38cd7610a2bce451d7c61ee#egg=django_debug_toolbar_request_history
 django-postman==3.6.2
 django-related-select==0.9.3
